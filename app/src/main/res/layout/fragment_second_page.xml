@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro.IntroPages.SecondPage">
+
+    <ImageView
+        android:id="@+id/second_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_second_page" />
+
+    <TextView
+        android:id="@+id/with_us_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_image"
+        android:layout_marginStart="@dimen/et_margin_start_end"
+        android:layout_marginTop="50dp"
+        android:text="With us"
+        android:textColor="@color/primary_orange"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/with_us_text"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="you will be able to design your own card for all occasions"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="35dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/intro_first_box"
+            android:layout_width="@dimen/box_w_and_h"
+            android:layout_height="@dimen/box_w_and_h"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/intro_second_box"
+            android:background="@drawable/intro_box_shape_empty" />
+
+        <ImageView
+            android:id="@+id/intro_second_box"
+            android:layout_width="@dimen/box_w_and_h"
+            android:layout_height="@dimen/box_w_and_h"
+            android:layout_centerInParent="true"
+            android:background="@drawable/intro_box_shape_fill" />
+
+        <ImageView
+            android:id="@+id/intro_third_box"
+            android:layout_width="@dimen/box_w_and_h"
+            android:layout_height="@dimen/box_w_and_h"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/intro_second_box"
+            android:background="@drawable/intro_box_shape_empty" />
+
+        <ImageView
+            android:id="@+id/next_page_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/et_margin_start_end"
+            android:src="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.Happy.Custom.HappyCustom">
+
+    <TextView
+        android:id="@+id/happy_custom_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/et_margin_vertical"
+        android:layout_marginTop="@dimen/et_margin_start_end"
+        android:layout_marginBottom="@dimen/et_margin_start_end"
+        android:drawableLeft="@drawable/back_arrow_orange"
+        android:text="Home"
+        android:textColor="@color/primary_orange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/happy_custom_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/happy_custom_back"
+        android:layout_centerHorizontal="true"
+        android:text="Design From Scratch"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/happy_custom_text"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/layer_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/et_margin_start_end"
+                android:text="Font Type"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/happy_custom_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/et_margin_start_end"
+                android:text="Create"
+                android:textAllCaps="false"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/happy_custom_spinner"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="@dimen/et_margin_start_end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_clicked_happy" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/et_margin_start_end"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="@dimen/et_margin_start_end"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/et_margin_start_end"
+            android:text="Color Selection"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
