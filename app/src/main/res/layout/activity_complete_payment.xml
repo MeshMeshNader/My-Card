@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.Payment.CompletePayment">
+
+    <TextView
+        android:id="@+id/complete_payment_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/et_margin_vertical"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:drawableLeft="@drawable/back_arrow_orange"
+        android:text="Back"
+        android:textColor="@color/primary_orange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/complete_payment_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/complete_payment_back"
+        android:layout_centerHorizontal="true"
+        android:text="Paiement By Knet"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/complete_payment_image"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/complete_payment_text"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/et_margin_start_end"
+        android:src="@drawable/knet" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/complete_payment_image"
+        android:layout_margin="@dimen/et_margin_start_end"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/complete_payment_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="@dimen/et_margin_vertical"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:background="@drawable/edit_text_shape"
+            android:drawableLeft="@drawable/ic_payment_card"
+            android:drawablePadding="-25dp"
+            android:gravity="center"
+            android:hint="Card Number"
+            android:inputType="number"
+            android:paddingStart="@dimen/et_margin_vertical" />
+
+        <EditText
+            android:id="@+id/complete_payment_card_date"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="@dimen/et_margin_vertical"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:background="@drawable/edit_text_shape"
+            android:drawableLeft="@drawable/ic_payment_date"
+            android:drawablePadding="-25dp"
+            android:gravity="center"
+            android:hint="DD/MM/YYYY"
+            android:inputType="number"
+            android:paddingStart="@dimen/et_margin_vertical" />
+
+        <EditText
+            android:id="@+id/complete_payment_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="@dimen/et_margin_vertical"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:background="@drawable/edit_text_shape"
+            android:drawableLeft="@drawable/ic_payment_id"
+            android:drawablePadding="-25dp"
+            android:gravity="center"
+            android:hint="Personal Identity Card"
+            android:inputType="number"
+            android:paddingStart="@dimen/et_margin_vertical" />
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/complete_payment_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/et_margin_start_end"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginEnd="@dimen/et_margin_start_end"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:background="@drawable/button_shape_orange"
+        android:text="Pay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+</RelativeLayout>

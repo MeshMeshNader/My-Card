@@ -18,11 +18,12 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ImagesView
 
     ArrayList<String> imagesList = new ArrayList<>();
     Context context;
+    OnImageClick onImageClick;
 
-
-    public ImagesAdapter(ArrayList<String> imagesList, Context context) {
+    public ImagesAdapter(ArrayList<String> imagesList, Context context, OnImageClick onImageClick) {
         this.imagesList = imagesList;
         this.context = context;
+        this.onImageClick = onImageClick;
     }
 
     @NonNull
@@ -40,6 +41,17 @@ public class ImagesAdapter extends RecyclerView.Adapter<ImagesAdapter.ImagesView
     @Override
     public void onBindViewHolder(@NonNull ImagesAdapter.ImagesViewHolder holder, int position) {
         Glide.with(holder.itemView.getContext()).load(imagesList.get(position)).into(holder.mImage);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onImageClick.onImageItemClick(imagesList.get(position));
+            }
+        });
+    }
+
+
+    public interface OnImageClick{
+        void onImageItemClick(String uri);
     }
 
     @Override

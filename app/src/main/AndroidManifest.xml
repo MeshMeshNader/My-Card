@@ -14,13 +14,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mycard">
-        <activity android:name=".User.Happy.Custom.HappyCustom">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".User.Payment.FinalResultReady"></activity>
+        <activity android:name=".User.Payment.CompletePayment" />
+        <activity android:name=".User.Sad.Custom.SadCustom" />
+        <activity android:name=".User.Payment.FinalResultCustom" />
+        <activity android:name=".User.Happy.Custom.HappyCustom" />
         <activity android:name=".User.Sad.Ready.SadReady" />
         <activity android:name=".User.Happy.Ready.HappyReady" />
         <activity android:name=".Intro.Intro" />
@@ -29,7 +27,11 @@
         <activity android:name=".Auth.Signup" />
         <activity android:name=".Auth.Login" />
         <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

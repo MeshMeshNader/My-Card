@@ -1,5 +1,6 @@
 package com.demo.mycard.User.Sad.Ready;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.demo.mycard.Adapters.CategoryAdapter;
 import com.demo.mycard.Adapters.ImagesAdapter;
 import com.demo.mycard.R;
+import com.demo.mycard.User.Happy.Ready.HappyReady;
+import com.demo.mycard.User.Payment.FinalResultReady;
 import com.demo.mycard.Utils.CustomProgress;
 import com.demo.mycard.Utils.TinyDB;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -22,7 +25,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
-public class SadReady extends AppCompatActivity implements CategoryAdapter.OnCatClick {
+public class SadReady extends AppCompatActivity implements CategoryAdapter.OnCatClick , ImagesAdapter.OnImageClick {
 
     TinyDB tinyDB;
 
@@ -130,7 +133,7 @@ public class SadReady extends AppCompatActivity implements CategoryAdapter.OnCat
     }
 
     private void showImages(ArrayList<String> list) {
-        imagesAdapter = new ImagesAdapter(list, this);
+        imagesAdapter = new ImagesAdapter(list, this, this);
         try {
             imagesRecyclerView.setAdapter(imagesAdapter);
         } catch (Exception e) {
@@ -151,5 +154,12 @@ public class SadReady extends AppCompatActivity implements CategoryAdapter.OnCat
                 getImages(SICK_KEY);
                 break;
         }
+    }
+
+    @Override
+    public void onImageItemClick(String uri) {
+        Intent image = new Intent(SadReady.this, FinalResultReady.class);
+        image.putExtra("imageURI", uri);
+        startActivity(image);
     }
 }

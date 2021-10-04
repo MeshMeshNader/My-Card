@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.demo.mycard.R;
 import com.demo.mycard.User.Happy.Ready.HappyReady;
+import com.demo.mycard.User.Sad.Custom.SadCustom;
 import com.demo.mycard.User.Sad.Ready.SadReady;
 
 public class SadOccasion extends Fragment {
@@ -39,7 +40,7 @@ public class SadOccasion extends Fragment {
         mCustom = view.findViewById(R.id.custom_sad_occasion);
 
         mReady.setOnClickListener( v -> startActivity(new Intent(getContext() , SadReady.class)));
-        //mCustom.setOnClickListener( v -> startActivity(new Intent(getContext() , SadOccasion.class)));
+        mCustom.setOnClickListener( v -> startActivity(new Intent(getContext() , SadCustom.class)));
 
     }
 }

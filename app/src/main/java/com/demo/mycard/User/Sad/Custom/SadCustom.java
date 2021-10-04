@@ -1,4 +1,4 @@
-package com.demo.mycard.User.Happy.Custom;
+package com.demo.mycard.User.Sad.Custom;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -23,10 +23,11 @@ import com.demo.mycard.Adapters.DecorationAdapter;
 import com.demo.mycard.R;
 import com.demo.mycard.User.Payment.FinalResultCustom;
 
-public class HappyCustom extends AppCompatActivity implements
+public class SadCustom extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener, ColorAdapter.OnColorClick, DecorationAdapter.OnDecorationClick {
 
-    private final String TAG = "HappyCustom";
+
+    private final String TAG = "SadCustom";
     Button mCreateBtn;
     String[] fonts = {"Roboto", "Playfair", "Ephesis", "Yaldevi", "Gemunu"};
     Spinner spinner;
@@ -49,38 +50,37 @@ public class HappyCustom extends AppCompatActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_happy_custom);
+        setContentView(R.layout.activity_sad_custom);
 
         initViews();
-
 
     }
 
     private void initViews() {
 
-        mSelectedColor = findViewById(R.id.happy_custom_color_selected);
-        mWidth = findViewById(R.id.happy_custom_width_et);
-        mHeight = findViewById(R.id.happy_custom_height_et);
-        mText = findViewById(R.id.happy_custom_text_et);
-        mSelectedColorText = findViewById(R.id.happy_custom_color_selected_text);
+        mSelectedColor = findViewById(R.id.sad_custom_color_selected);
+        mWidth = findViewById(R.id.sad_custom_width_et);
+        mHeight = findViewById(R.id.sad_custom_height_et);
+        mText = findViewById(R.id.sad_custom_text_et);
+        mSelectedColorText = findViewById(R.id.sad_custom_color_selected_text);
 
-        mCreateBtn = findViewById(R.id.happy_custom_create);
+        mCreateBtn = findViewById(R.id.sad_custom_create);
         mCreateBtn.setOnClickListener(v -> createCard());
-        spinner = findViewById(R.id.happy_custom_spinner);
+        spinner = findViewById(R.id.sad_custom_spinner);
         spinner.setOnItemSelectedListener(this);
 
-        mBackBtn = findViewById(R.id.happy_custom_back);
+        mBackBtn = findViewById(R.id.sad_custom_back);
         mBackBtn.setOnClickListener(v -> finish());
 
-        colorRecyclerView = findViewById(R.id.happy_custom_color_rv);
+        colorRecyclerView = findViewById(R.id.sad_custom_color_rv);
         colorAdapter = new ColorAdapter(this, this);
         colorRecyclerView.setAdapter(colorAdapter);
         RecyclerView.LayoutManager colorLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         colorRecyclerView.setLayoutManager(colorLayoutManager);
 
 
-        decorationRecyclerView = findViewById(R.id.happy_custom_decoration_rv);
-        decorationAdapter = new DecorationAdapter(this, true, this);
+        decorationRecyclerView = findViewById(R.id.sad_custom_decoration_rv);
+        decorationAdapter = new DecorationAdapter(this, false, this);
         decorationRecyclerView.setAdapter(decorationAdapter);
         RecyclerView.LayoutManager decorationLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         decorationRecyclerView.setLayoutManager(decorationLayoutManager);
@@ -95,7 +95,7 @@ public class HappyCustom extends AppCompatActivity implements
     private void createCard() {
         if (validate()) {
 
-            Intent card = new Intent(HappyCustom.this, FinalResultCustom.class);
+            Intent card = new Intent(SadCustom.this, FinalResultCustom.class);
             card.putExtra("cardFont", font);
             card.putExtra("cardColor", color);
             card.putExtra("cardImage", image);
@@ -152,4 +152,6 @@ public class HappyCustom extends AppCompatActivity implements
     public void onDecorationItemClick(Integer decoration) {
         this.image = decoration;
     }
+
+
 }

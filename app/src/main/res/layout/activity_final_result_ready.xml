@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User.Payment.FinalResultReady">
+
+    <TextView
+        android:id="@+id/final_result_ready_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/et_margin_vertical"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:drawableLeft="@drawable/back_arrow_orange"
+        android:text="Edit"
+        android:textColor="@color/primary_orange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/final_result_ready_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/final_result_ready_back"
+        android:layout_centerHorizontal="true"
+        android:text="Ready Made Design"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/final_result_ready_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/final_result_ready_text"
+        android:layout_marginStart="@dimen/et_margin_small_start_end"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:text="The Final Result"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_below="@id/final_result_ready_text2"
+        android:layout_margin="15dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="10dp">
+
+
+        <ImageView
+            android:id="@+id/final_result_ready_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:scaleType="fitXY" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/final_result_ready_pay_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/et_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/et_margin_start_end"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginEnd="@dimen/et_margin_start_end"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:background="@drawable/button_shape_orange"
+        android:text="Pay"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>

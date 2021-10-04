@@ -10,12 +10,13 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.demo.mycard.R;
+import com.demo.mycard.User.Happy.Custom.HappyCustom;
 import com.demo.mycard.User.Happy.Ready.HappyReady;
 
 public class HappyOccasion extends Fragment {
 
     View view;
-    CardView mReady , mCustom;
+    CardView mReady, mCustom;
 
     public HappyOccasion() {
 
@@ -38,8 +39,8 @@ public class HappyOccasion extends Fragment {
         mReady = view.findViewById(R.id.ready_happy_occasion);
         mCustom = view.findViewById(R.id.custom_happy_occasion);
 
-        mReady.setOnClickListener( v -> startActivity(new Intent(getContext() , HappyReady.class)));
-        //mCustom.setOnClickListener( v -> startActivity(new Intent(getContext() , SadOccasion.class)));
+        mReady.setOnClickListener(v -> startActivity(new Intent(getContext(), HappyReady.class)));
+        mCustom.setOnClickListener(v -> startActivity(new Intent(getContext(), HappyCustom.class)));
 
     }
 }

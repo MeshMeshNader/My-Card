@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.Happy.Custom.HappyCustom">
+    tools:context=".User.Sad.Custom.SadCustom">
 
     <TextView
-        android:id="@+id/happy_custom_back"
+        android:id="@+id/sad_custom_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -14,17 +15,17 @@
         android:layout_marginStart="@dimen/et_margin_vertical"
         android:layout_marginTop="@dimen/et_margin_vertical"
         android:layout_marginBottom="@dimen/et_margin_vertical"
-        android:drawableLeft="@drawable/back_arrow_orange"
+        android:drawableLeft="@drawable/back_arrow_gray"
         android:text="Home"
-        android:textColor="@color/primary_orange"
+        android:textColor="@color/dark_gray"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/happy_custom_text"
+        android:id="@+id/sad_custom_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/happy_custom_back"
+        android:layout_below="@id/sad_custom_back"
         android:layout_centerHorizontal="true"
         android:text="Design From Scratch"
         android:textColor="@color/black"
@@ -34,7 +35,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/happy_custom_text"
+        android:layout_below="@id/sad_custom_text"
         android:layout_marginTop="25dp"
         android:orientation="vertical">
 
@@ -54,12 +55,13 @@
                 android:textStyle="bold" />
 
 
-            <Button
-                android:id="@+id/happy_custom_create"
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sad_custom_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
+                android:background="@drawable/button_clicked_sad"
                 android:layout_marginEnd="@dimen/et_margin_small_start_end"
                 android:text="Create"
                 android:textAllCaps="false"
@@ -67,12 +69,12 @@
         </RelativeLayout>
 
         <Spinner
-            android:id="@+id/happy_custom_spinner"
+            android:id="@+id/sad_custom_spinner"
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_marginStart="@dimen/et_margin_small_start_end"
             android:layout_marginEnd="8dp"
-            android:background="@drawable/button_clicked_happy" />
+            android:background="@drawable/button_clicked_sad" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -93,7 +95,7 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/happy_custom_color_rv"
+            android:id="@+id/sad_custom_color_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/et_margin_small_start_end"
@@ -109,7 +111,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/happy_custom_color_selected_text"
+                android:id="@+id/sad_custom_color_selected_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -130,7 +132,7 @@
                 app:cardElevation="10dp">
 
                 <RelativeLayout
-                    android:id="@+id/happy_custom_color_selected"
+                    android:id="@+id/sad_custom_color_selected"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:background="@color/primary_orange"
@@ -175,12 +177,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/happy_custom_width_et"
+                android:id="@+id/sad_custom_width_et"
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/et_margin_small_start_end"
-                android:background="@drawable/edit_text_shape"
+                android:background="@drawable/button_clicked_sad"
                 android:gravity="center"
                 android:inputType="number" />
 
@@ -195,12 +197,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/happy_custom_height_et"
+                android:id="@+id/sad_custom_height_et"
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="@dimen/et_margin_small_start_end"
-                android:background="@drawable/edit_text_shape"
+                android:background="@drawable/button_clicked_sad"
                 android:gravity="center"
                 android:inputType="number" />
 
@@ -225,13 +227,13 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/happy_custom_text_et"
+            android:id="@+id/sad_custom_text_et"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginStart="@dimen/et_margin_small_start_end"
             android:layout_marginTop="@dimen/et_margin_vertical"
             android:layout_marginEnd="@dimen/et_margin_small_start_end"
-            android:background="@drawable/edit_text_shape"
+            android:background="@drawable/button_clicked_sad"
             android:hint="write the phrase you want"
             android:paddingStart="@dimen/et_margin_vertical" />
 
@@ -254,7 +256,7 @@
             android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/happy_custom_decoration_rv"
+            android:id="@+id/sad_custom_decoration_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/et_margin_small_start_end"
@@ -263,6 +265,6 @@
 
 
     </LinearLayout>
-
+    
 
 </RelativeLayout>
