@@ -163,6 +163,7 @@ public class CompletePayment extends AppCompatActivity {
         orderDataModel.setUserCreditNumber(mCardNumber.getText().toString());
         orderDataModel.setUserCreditDate(mCardDate.getText().toString());
         orderDataModel.setUserCreditID(mID.getText().toString());
+        orderDataModel.setOrderStatus("On Request");
         orderDataModel.setOrderDate(format.format(new Date()));
         orderDataModel.setOrderKey(orderKey);
         if (isCustom) {

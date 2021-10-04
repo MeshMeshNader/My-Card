@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mycard">
-        <activity android:name=".User.Payment.FinalResultReady"></activity>
+        <activity android:name=".Admin.ViewOrderDetails"></activity>
+        <activity android:name=".Auth.EditProfile" />
+        <activity android:name=".User.Payment.FinalResultReady" />
         <activity android:name=".User.Payment.CompletePayment" />
         <activity android:name=".User.Sad.Custom.SadCustom" />
         <activity android:name=".User.Payment.FinalResultCustom" />

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.ViewOrderDetails">
+
+    <TextView
+        android:id="@+id/order_details_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/et_margin_vertical"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:drawableLeft="@drawable/back_arrow_orange"
+        android:text="Home"
+        android:textColor="@color/primary_orange"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/order_details_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_details_back"
+        android:layout_centerHorizontal="true"
+        android:text="Design From Scratch"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/order_details_text"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_details_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="@dimen/et_margin_start_end"
+            android:text="User Name : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/order_details_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:text="Order Number : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/order_details_order_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:text="Type : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/order_details_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:text="Status : "
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/et_margin_small_start_end"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/et_margin_small_start_end"
+            android:layout_marginBottom="10dp"
+            android:background="@color/light_gray" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/order_details_custom_card_dim"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/et_margin_vertical"
+            android:elevation="20dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:id="@+id/order_details_custom_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_orange">
+
+                <ImageView
+                    android:id="@+id/order_details_custom_image1"
+                    android:layout_width="@dimen/corners_images_dim"
+                    android:layout_height="@dimen/corners_images_dim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/et_margin_vertical"
+                    android:layout_marginTop="@dimen/et_margin_vertical"
+                    android:src="@drawable/ic_sad_decoration1" />
+
+                <ImageView
+                    android:id="@+id/order_details_custom_image2"
+                    android:layout_width="@dimen/corners_images_dim"
+                    android:layout_height="@dimen/corners_images_dim"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/et_margin_vertical"
+                    android:layout_marginEnd="@dimen/et_margin_vertical"
+                    android:src="@drawable/ic_sad_decoration2" />
+
+                <ImageView
+                    android:id="@+id/order_details_custom_image3"
+                    android:layout_width="@dimen/corners_images_dim"
+                    android:layout_height="@dimen/corners_images_dim"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/et_margin_vertical"
+                    android:layout_marginBottom="@dimen/et_margin_vertical"
+                    android:src="@drawable/ic_sad_decoration3" />
+
+                <ImageView
+                    android:id="@+id/order_details_custom_image4"
+                    android:layout_width="@dimen/corners_images_dim"
+                    android:layout_height="@dimen/corners_images_dim"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/et_margin_vertical"
+                    android:layout_marginBottom="@dimen/et_margin_vertical"
+                    android:src="@drawable/ic_sad_decoration4" />
+
+
+                <TextView
+                    android:id="@+id/order_details_custom_center_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Eid Mobark"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/half_circle" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/order_details_ready_card_dim"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="15dp"
+            android:elevation="20dp"
+            android:visibility="gone"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="10dp">
+
+
+            <ImageView
+                android:id="@+id/order_details_ready_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="15dp"
+                android:scaleType="fitXY" />
+
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

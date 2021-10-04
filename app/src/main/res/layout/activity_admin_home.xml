@@ -1,17 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Admin.AdminHome">
 
-    <TextView
+    <ImageView
+        android:id="@+id/admin_profile_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Admin Home"
-        android:textSize="30sp"
-        android:layout_centerInParent="true"
-        android:textColor="@color/primary_orange"/>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="@dimen/et_margin_vertical"
+        android:layout_marginTop="@dimen/et_margin_vertical"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:src="@drawable/ic_person" />
+
+
+    <ImageView
+        android:id="@+id/admin_home_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin_profile_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/et_margin_vertical"
+        android:orientation="vertical"
+        android:src="@drawable/ic_logo_orange" />
+
+    <TextView
+        android:id="@+id/admin_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin_home_logo"
+        android:layout_marginStart="@dimen/et_margin_small_start_end"
+        android:text="Orders Status"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/admin_user_orders_swipe_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/admin_text1"
+        android:layout_marginTop="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/admin_orders_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

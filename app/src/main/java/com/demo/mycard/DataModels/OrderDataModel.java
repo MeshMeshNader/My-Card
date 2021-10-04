@@ -10,18 +10,18 @@ public class OrderDataModel {
     String userCreditID;
     String orderDate;
     String orderType;
-    String orderURI;
     String orderFont;
     String orderColor;
     String orderImage;
     String orderWidth;
     String orderHeight;
     String orderText;
+    String orderStatus;
 
     public OrderDataModel() {
     }
 
-    public OrderDataModel(String orderKey, Integer orderNumber, String userID, String userName, String userCreditNumber, String userCreditDate, String userCreditID, String orderDate, String orderType, String orderURI, String orderFont, String orderColor, String orderImage, String orderWidth, String orderHeight, String orderText) {
+    public OrderDataModel(String orderKey, Integer orderNumber, String userID, String userName, String userCreditNumber, String userCreditDate, String userCreditID, String orderDate, String orderType, String orderURI, String orderFont, String orderColor, String orderImage, String orderWidth, String orderHeight, String orderText, String orderStatus) {
         this.orderKey = orderKey;
         this.orderNumber = orderNumber;
         this.userID = userID;
@@ -31,13 +31,21 @@ public class OrderDataModel {
         this.userCreditID = userCreditID;
         this.orderDate = orderDate;
         this.orderType = orderType;
-        this.orderURI = orderURI;
         this.orderFont = orderFont;
         this.orderColor = orderColor;
         this.orderImage = orderImage;
         this.orderWidth = orderWidth;
         this.orderHeight = orderHeight;
         this.orderText = orderText;
+        this.orderStatus = orderStatus;
+    }
+
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
     }
 
     public String getUserCreditNumber() {
@@ -110,14 +118,6 @@ public class OrderDataModel {
 
     public void setOrderType(String orderType) {
         this.orderType = orderType;
-    }
-
-    public String getOrderURI() {
-        return orderURI;
-    }
-
-    public void setOrderURI(String orderURI) {
-        this.orderURI = orderURI;
     }
 
     public String getOrderFont() {
